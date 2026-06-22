@@ -19,5 +19,6 @@ models:
           - unique
           - not_null
           - relationships:
-              to: ref('dim_employee')
-              field: employee_id
+              arguments:
+                to: ref('dim_employee')
+                field: employee_id
