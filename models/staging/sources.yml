@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: ibm_hr
+    schema: bronze
+    tables:
+      - name: employees_raw
