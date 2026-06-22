@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_employee
+    description: "One row per employee, descriptive attributes"
+    columns:
+      - name: employee_id
+        description: "Primary key, unique per employee"
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_employee_metrics
+    description: "One row per employee, measurable/aggregatable metrics"
+    columns:
+      - name: employee_id
+        description: "Foreign key to dim_employee"
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('dim_employee')
+              field: employee_id
