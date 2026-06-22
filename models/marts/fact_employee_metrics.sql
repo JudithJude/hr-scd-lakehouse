@@ -1,0 +1,21 @@
+SELECT
+    employee_id,
+    MonthlyIncome,
+    DailyRate,
+    HourlyRate,
+    MonthlyRate,
+    JobSatisfaction,
+    EnvironmentSatisfaction,
+    WorkLifeBalance,
+    RelationshipSatisfaction,
+    PerformanceRating,
+    PercentSalaryHike,
+    YearsAtCompany,
+    YearsInCurrentRole,
+    YearsSinceLastPromotion,
+    YearsWithCurrManager,
+    TotalWorkingYears,
+    NumCompaniesWorked,
+    TrainingTimesLastYear,
+    StockOptionLevel
+FROM {{ ref('stg_employees') }}
