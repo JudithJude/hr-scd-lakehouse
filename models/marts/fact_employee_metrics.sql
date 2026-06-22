@@ -5,6 +5,7 @@ SELECT
     HourlyRate,
     MonthlyRate,
     JobSatisfaction,
+    {{ satisfaction_label('JobSatisfaction') }} AS job_satisfaction_label,
     EnvironmentSatisfaction,
     WorkLifeBalance,
     RelationshipSatisfaction,
